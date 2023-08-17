@@ -14,7 +14,7 @@ function addToCollection(title,artist, yearPublished){
     return console.log('This album was added to the collection', album)
 }
 //This tests the addToCollection function.
-//This section also adds 6b albums to the collection.
+//This section also adds 6 albums to the collection.
 
 addToCollection('Distant Worlds: Music from Final Fantasy', 'Nobuo Uematsu', '2007')
 addToCollection('Heroes', 'The Midnight', '2022')
@@ -22,3 +22,6 @@ addToCollection('Brand New Eyes', 'Paramour', '2009')
 addToCollection('Monsters', 'The Midnight', '2020')
 addToCollection('Viva La Vida or Death and All His Friend', 'Coldplay', '2008')
 addToCollection('head or heart', 'Christina Perri', '2014')
+
+//This section will log the collection array.
+console.log(collection)
