@@ -25,12 +25,12 @@ addToCollection('head or heart', 'Christina Perri', '2014');
 
 //This section will log the collection array.
 console.log(collection)
+//This function will loop over the objects in an array and log the vales in a string.
 
 function showCollection(Array){
     for (let i=0; i<Array.length; i++){ 
     }
     Array.forEach(({title, artist, yearPublished})=>{console.log(`${title} by ${artist}, published in ${yearPublished}.`)});
 }
-
-
+//This will show the string created by showCollection.
 console.log(showCollection(collection));
