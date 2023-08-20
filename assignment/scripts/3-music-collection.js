@@ -24,7 +24,8 @@ addToCollection('Viva La Vida or Death and All His Friend', 'Coldplay', '2008');
 addToCollection('head or heart', 'Christina Perri', '2014');
 
 //This section will log the collection array.
-console.log(collection)
+console.log("Testing collection, expecting all albums to be added via addToCollection()");
+console.log(collection);
 //This function will loop over the objects in an array and log the vales in a string.
 
 function showCollection(Array){
@@ -33,9 +34,10 @@ function showCollection(Array){
     Array.forEach(({title, artist, yearPublished})=>{console.log(`${title} by ${artist}, published in ${yearPublished}.`)});
 }
 //This will show the string created by showCollection.
+console.log("Testing showCollection(), expecting collection to return as a string.");
 console.log(showCollection(collection));
 
-
+//This function loops through the collection to look for albums that match the artist and them adds them to a new array.
 function findByArtist(artist){
     const foundArtist=[];
 
@@ -47,4 +49,11 @@ function findByArtist(artist){
     console.log(foundArtist);
     return showCollection(foundArtist);
 }
-console.log(findByArtist("Paramour"))
+
+//This is testing for findByArtist() to confirm the return will add an album in the collection and will be added to the new array.
+console.log("Testing findByArtist(), should return with Brand New Eyes added to foundArtist array");
+console.log(findByArtist("Paramour"));
+
+//This is testing for findByArtist() to confirm that the array will return empty if there is no match to the artist.
+console.log("Testiing findByArtist(), foundArtist array should come back empty");
+console.log(findByArtist("JayZ"))
