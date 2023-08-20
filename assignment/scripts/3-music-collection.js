@@ -1,16 +1,16 @@
 console.log('***** Music Collection *****')
 //This will be the basis for our music array.
 // We will be adding to this array via the later functions.
-const collection=[];
+let collection=[];
 
 //This function will add an album's title, artist and year published to a new object and then add that object to the collection array.
 
 function addToCollection(title,artist, yearPublished){
-    const album={};
-    album.title = title;
-    album.artist = artist;
-    album.yearPublished = yearPublished;
-    collection.push(album);
+    const album={
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished};
+    collection.push(album)
     return console.log('This album was added to the collection', album);
 }
 //This tests the addToCollection function.
@@ -34,3 +34,17 @@ function showCollection(Array){
 }
 //This will show the string created by showCollection.
 console.log(showCollection(collection));
+
+
+function findByArtist(artist){
+    const foundArtist=[];
+
+    for (let i=0; i<collection.length; i++){
+       if (collection[i].artist === artist){
+       foundArtist.push(collection[i]);
+        }
+    }
+    console.log(foundArtist);
+    return showCollection(foundArtist);
+}
+console.log(findByArtist("Paramour"))
